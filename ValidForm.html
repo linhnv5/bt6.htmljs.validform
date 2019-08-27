@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Valid form dung html</title>
+
+	<!-- CSS For Form -->
+	<style>
+		*{
+			margin:  0;
+			padding: 0;
+			border:  none;
+		}
+		body {
+			overflow: hidden;
+			background-color: #cfg1fgc;
+		}
+		form {
+			boder: 1px solid #80808000;
+			width: 50%;
+			margin-left: 25%;
+			margin-right: 25%;
+			margin-top: 20%;
+			background-color: white;
+		}
+		label {
+			display: block;
+			float: left;
+			margin-left: -126px;
+			font-weight: lighter;
+		}
+		input {
+			display: block;
+			margin-top:    5px;
+			margin-bottom: 10px;
+			outline-style: none;
+		}
+		input[type="text"], input[type="password"] {
+			padding: 5px;
+			border-bottom: 2px solid #00BCD4;
+			width: 70%;
+		}
+		input[type="submit"] {
+			margin-top: 20px;
+			padding: 7px;
+			border: 2px solid #00BCD4;
+			width: 50%;
+			background: #53AC40;
+		}
+		input[type="submit"]:hover {
+			opacity: 0.5;
+		}
+		#warn {
+			background: blue;
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="warn"></div>
+	<form action="" method="GET" onsubmit="return submitAction()">
+		<label>FullName:</label>
+			<input type="text" placeholder="Enter Your Full Name" name="fullname" required />
+		<label>UserName:</label>
+			<input type="text" placeholder="Enter Username" name="user" required />
+		<label>Password:</label>
+			<input type="password" placeholder="Enter Password" name="pass" required />
+		<input type="submit" value="Submit" />
+	</form>
+
+	<!-- Script to valid form html -->
+	<script type="text/javascript">
+		<!-- Use that to avoid browser not support js
+		var userExists = "linhnv5"; // User already exists
+		var paswd=  /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*_])[a-zA-Z0-9!@#$%^&*_]{9,}$/; // password pattern to check password
+
+		function submitAction() { // dunction valid form
+			document.getElementById("warn").innerHTML = ""; // clear warning
+
+			let user = document.getElementsByName("user")[0].value; // Get user
+			let pass = document.getElementsByName("pass")[0].value; // Get pass
+
+			if (user == null || pass == null) {
+				document.getElementById("warn").innerHTML = "Username or password required"; // info
+				return false;
+			}
+
+			if (user.toLowerCase() == userExists) { // Check user
+				document.getElementById("warn").innerHTML = "Username already exists, please change your username"; // info
+				document.getElementsByName("user")[0].focus(); // focus to type
+				return false;
+			}
+
+			if (!pass.match(paswd)) { // Check password
+				document.getElementById("warn").innerHTML = "Password must contain at least one alphabet, one numeric digit and a special character and length greater than 9"; // info
+				document.getElementsByName("pass")[0].focus(); // focus to type
+				return false;
+			}
+
+			return true;
+		}
+		-->
+	</script>
+</body>
+</html>
+
